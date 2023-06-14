@@ -27,7 +27,6 @@ dataset = '60/8'
 # path ='/home/lcf/Desktop/SPL/'
 np.random.seed(100)
 
-# labels_name =['你','去','天','头','来','水','说']
 n_splits = 8
 import sys
 import torch
