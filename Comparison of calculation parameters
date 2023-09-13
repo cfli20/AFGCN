@@ -1,0 +1,33 @@
+\begin{table}[t]
+\centering
+\caption{The calculation parameter size of each network for two datasets.}
+% \setlength{\tabcolsep}{50pt}
+% \resizebox{.48\textwidth}{!}{
+\begin{tabular}{cccccc}
+\toprule
+Datasets&Subjects & EEGNet & DeepConvNet & ShallowConvNet & AFGCN\\
+\hline
+\multirow{3}{*}{ASU}
+ &1&120,468 &   660  & 10,006   &  466,958,020 \\
+ &2&150,037 & 816 &  12,475    & 466,959,605\\
+& 3&150,037 & 816 &12,475 &466,959,605 \\
+&4&209,175 & 1,128 &17,413&   466,962,775 \\
+
+& 5&90,899 & 504    & 7,537   &  466,956,435 \\
+&6&209,175 &  1,128&  17,413    & 466,962,775 \\
+&7&209,175 & 816 & 12,475 &  466,959,605 \\
+&8&17,9606 & 972  & 14,944 &   466,961,190 \\
+% &\checkmark &\checkmark & \checkmark&\checkmark  & \textbf{45.30} \\
+\cline{2-6}
+
+\multirow{1}{*}{Kara One}
+
+&  &179606 & 14944  & 660 &   31,194,854 \\
+
+
+
+\bottomrule
+\end{tabular}
+% }
+\label{cheng.t2}
+\end{table}
