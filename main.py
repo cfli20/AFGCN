@@ -215,21 +215,21 @@ for i in range(epochs):
 
             # print(i, 'train loss', t_sum / n_splits, 'val loss', v_sum / n_splits)
             print(i,  'train acc',t_sum/n_splits, 'val acc', v_sum/n_splits )
-            with torch.no_grad():
-                correct = 0
-                total = 0
-                labels = ty
-                outputs = model(tx.data, ta)  # ,tadjs
-                _, predicted = torch.max(outputs, 1)
-                total += labels.size(0)
-                correct += (predicted == labels).sum().item()
-                print('test acc--------------------------------------------------------', correct / total)
+    with torch.no_grad():
+        correct = 0
+        total = 0
+        labels = ty
+        outputs = model(tx.data, ta)  # ,tadjs
+        _, predicted = torch.max(outputs, 1)
+        total += labels.size(0)
+        correct += (predicted == labels).sum().item()
+        print('test acc--------------------------------------------------------', correct / total)
 
-                pred_y = predicted
-                accs = (correct / total)
+        pred_y = predicted
+        accs = (correct / total)
 
-                cm = confusion_matrix(labels, pred_y )
+        cm = confusion_matrix(labels, pred_y )
 
-                print(cm)
-                # plot_confusion_matrix(cm,target_names =labels_name,m=i,acc=accs)
+        print(cm)
+        # plot_confusion_matrix(cm,target_names =labels_name,m=i,acc=accs)
 
